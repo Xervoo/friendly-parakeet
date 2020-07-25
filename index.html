@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sifferspel</title>
+    <link type="text/css" rel="stylesheet" href="./index.css">
+</head>
+
+<body>
+
+    <main class="game-container">
+        <aside class="sidebar">
+            <div>
+                <div class="card light-green flex mb-20">
+                    <div class="info-container">
+                        <h2 class="info__heading">Runda</h2>
+                        <span class="info__item" id="round-number">1</span>
+                    </div>
+                    <div class="divider"></div>
+                    <div class="info-container">
+                        <h2 class="info__heading">Siffror</h2>
+                        <span class="info__item" id="sequence-length-number">3</span>
+                    </div>
+                </div>
+
+                <div class="card light-green mb-20">
+                    <h2 class="info__heading mb-20">Angivna Siffror</h2>
+                    <span class="info__item" id="pressed-sequence">...</span>
+                </div>
+
+                <div class="card light-blue">
+                    <h2 class="info__heading mb-20">Instruktioner</h2>
+                    <p class="info__text mb-5">Datorn ger dig en slumpvist vald följd av blinkande rutor som du sedan
+                        ska
+                        härma.</p>
+                    <p class="info__text mb-5">Detta sker i flera varv med en tillagd siffra för varje varv.</p>
+                    <p class="info__text mb-5">Spelet fortsätter tills du härmar en följd fel.</p>
+                </div>
+            </div>
+
+            <div>
+                <button class="control start" id="start-game">
+                    Starta Spelet
+                </button>
+
+                <button class="control end hidden" id="end-game">
+                    Avsluta Spelet
+                </button>
+
+                <button class="control reset hidden" id="reset-game">
+                    Återställ Spelet
+                </button>
+            </div>
+
+
+        </aside>
+
+        <section>
+            <div class="card light-gray mb-20">
+                <span class="instruction-text">Starta spelet med knappen till vänster</span>
+            </div>
+
+            <div class="card card-45 dark-gray">
+                <div class="countdown hidden"></div>
+                <div class="game-failed hidden">
+                    <h2>Spel slut!</h2>
+                    <p>Du kom till runda <b class="game-failed-round"></b>!</p>
+                    <p>Rätt sekvens var <br><b class="game-failed-sequence"></b></p>
+                    <p>Spela igen genom att trycka på "Starta Spel" knappen.</p>
+                </div>
+                <div class="button-grid">
+                    <div class="button" id="1">1</div>
+                    <div class="button" id="2">2</div>
+                    <div class="button" id="3">3</div>
+                    <div class="button" id="4">4</div>
+                    <div class="button" id="5">5</div>
+                    <div class="button" id="6">6</div>
+                    <div class="button" id="7">7</div>
+                    <div class="button" id="8">8</div>
+                    <div class="button" id="9">9</div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <audio id="fail1" volume="0" src="./audio/fail_1.mp3"></audio>
+    <audio id="fail2" src="./audio/fail_2.mp3"></audio>
+    <audio id="fail3" src="./audio/fail_3.mp3"></audio>
+    <audio id="fail4" src="./audio/fail_4.mp3"></audio>
+    <audio id="start1" volume="0" src="./audio/beep_1.mp3"></audio>
+    <audio id="start2" src="./audio/beep_2.mp3"></audio>
+    <audio id="start3" src="./audio/beep_3.mp3"></audio>
+
+    <script src="./js/index.js"></script>
+</body>
+
+</html>

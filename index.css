@@ -1,0 +1,286 @@
+*, body, ::before, ::after {
+    margin: 0;
+    padding: 0;
+
+    box-sizing: border-box;
+}
+
+body {
+    background: #F3F3F3;
+    font-family: "Segoe UI", sans-serif;
+    font-size: 16px;
+}
+
+.game-container {
+    height: 100vh;
+
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: center;
+    align-content: center;
+
+    grid-column-gap: 60px;
+}
+
+.sidebar {
+    width: 450px;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+}
+
+section {
+    width: 750px;
+}
+
+
+
+.card {
+    position: relative;
+    padding: 30px 45px;
+    border-radius: 10px;
+}
+
+.card-45 {
+    padding: 45px;
+}
+
+
+
+.flex {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.light-green {
+    background: #E9FFED;
+    border: 1px solid #112B15;
+}
+
+.light-blue {
+    background: #E9EDFF;
+    color: #252836;
+    border: 1px solid #252836;
+}
+
+.light-gray {
+    background: #EEEEEE;
+    border: 1px solid #CBCBCB;
+    color: #5E5E5E;
+}
+
+.dark-gray {
+    background: #E2E2E2;
+    border: 1px solid #616161;
+    color: #616161;
+}
+
+.info-container {
+    background: rgba(255, 255, 255, 0.1);
+    flex-grow: 1;
+
+    display: flex;
+    justify-content: flex-start;
+    align-items: baseline;
+}
+
+.info-container:last-of-type {
+    justify-content: flex-end;
+}
+
+.divider {
+    width: 1px;
+    height: 30px;
+    background: #8EA892;
+}
+
+.info__heading {
+    font-size: 28px;
+    font-weight: bold;
+    text-decoration: underline;
+
+    margin-right: 30px;
+}
+
+.light-green .info__heading {
+    color: #738576;
+}
+
+.light-blue .info__heading {
+    color: #13141C;
+}
+
+.info__item {
+    font-size: 36px;
+    font-weight: bold;
+}
+
+.light-green .info__item {
+    color: #09130A;
+}
+
+.info__text {
+    font-size: 22px;
+}
+
+.light-blue .info__text {
+    color: #13141C;
+}
+
+
+
+
+.control {
+    padding: 15px 30px;
+    border: none;
+
+    font-size: 28px;
+    font-weight: bold;
+    border-radius: 10px;
+
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.start {
+    background: #546858;
+    color: #E9FFED;
+}
+
+.end {
+    background: #470E0E;
+    color: #F3E7E7;
+}
+
+.reset {
+    background: #1B293D;
+    color: #CEDDF2;
+}
+
+
+
+
+
+.instruction-text {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+
+
+.countdown {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    z-index: 90;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: white;
+    border: 1px solid gray;
+    border-radius: 10px;
+    padding: 60px;
+
+    font-size: 240px;
+    font-weight: bold;
+
+    color: red;
+}
+
+.game-failed {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    z-index: 91;
+
+    background: white;
+    border: 1px solid gray;
+    border-radius: 10px;
+
+    padding: 60px;
+
+    width: 400px;
+}
+
+.game-failed h2 {
+    font-size: 60px;
+    text-align: center;
+
+    margin-bottom: 30px;
+
+    color: crimson;
+}
+
+.game-failed p {
+    font-size: 30px;
+    margin-bottom: 15px;
+
+    color: rgba(0, 0, 0, 0.7);
+}
+
+
+
+.button-grid {
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 30px;
+}
+
+.button {
+    width: 200px;
+    height: 200px;
+    background: #F2F2F2;
+    color: #405143;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 20px;
+
+    font-size: 94px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.button:hover, .button:focus {
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
+}
+
+.button--correct {
+    background: #6BFF82;
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
+}
+
+.button--incorrect {
+    background: #FF6B6B;
+    color: #361818;
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
+}
+
+
+
+
+.mb-20 {
+    margin-bottom: 20px;
+}
+
+.mb-5 {
+    margin-bottom: 5px;
+}
+
+
+.hidden {
+    display: none !important;
+}
